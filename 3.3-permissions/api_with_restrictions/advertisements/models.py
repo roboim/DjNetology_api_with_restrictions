@@ -28,3 +28,6 @@ class Advertisement(models.Model):
     updated_at = models.DateTimeField(
         auto_now=True
     )
+
+    def __str__(self):
+        return '{0}_{1}_{2}'.format(self.title, self.description, self.updated_at)

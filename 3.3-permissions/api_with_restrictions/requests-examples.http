@@ -14,14 +14,14 @@ Content-Type: application/json
 Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 
 {
-  "title": "Шкаф 11",
+  "title": "Шкаф 99",
   "description": "Срочно"
 }
 
 ###
 
 # удаление объявления
-DELETE {{baseUrl}}/advertisements/23/
+DELETE {{baseUrl}}/advertisements/34/
 Content-Type: application/json
 Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 
@@ -32,18 +32,18 @@ Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/4/
+PATCH {{baseUrl}}/advertisements/16/
 Content-Type: application/json
 Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 
 {
-  "status": "OPEN"
+  "status": "CLOSED"
 }
 
 ###
 
 # фильтрация по создателю
-GET {{baseUrl}}/advertisements/?creator=3
+GET {{baseUrl}}/advertisements/?creator=1
 Content-Type: application/json
 
 ###
@@ -51,3 +51,8 @@ Content-Type: application/json
 # фильтрация по дате
 GET {{baseUrl}}/advertisements/?created_at_before=2020-10-01
 Content-Type: application/json
+
+###
+
+4d47e8033b623153c5bb405d3a4a81a7dcb4a5cf
+af59613cf76987dc001bf04d93b3c787a2951430

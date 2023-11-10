@@ -14,7 +14,7 @@ Content-Type: application/json
 Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 
 {
-  "title": "Шкаф 106",
+  "title": "Шкаф 109",
   "description": "Срочно"
 }
 
@@ -32,7 +32,7 @@ Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 ###
 
 # попытка поменять объявление
-PATCH {{baseUrl}}/advertisements/44/
+PATCH {{baseUrl}}/advertisements/48/
 Content-Type: application/json
 Authorization: Token af59613cf76987dc001bf04d93b3c787a2951430
 

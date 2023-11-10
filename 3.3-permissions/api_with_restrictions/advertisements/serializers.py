@@ -47,8 +47,8 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         status_flag = False
         if not self.context["request"].data.get("status"):
             status_flag = True
-        elif self.context["request"].data["status"] == 'CLOSED':
-            status_flag = False
+        elif self.context["request"].data["status"] == 'OPEN':
+            status_flag = True
         if len(list_adv) < 10 or not status_flag:
             return data
         else:

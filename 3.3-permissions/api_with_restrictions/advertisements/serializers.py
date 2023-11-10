@@ -44,7 +44,12 @@ class AdvertisementSerializer(serializers.ModelSerializer):
         # TODO: добавьте требуемую валидацию
         user_id = self.context["request"].user.id
         list_adv = (Advertisement.objects.filter(status='OPEN', creator__id=user_id))
-        if len(list_adv) < 10:
+        status_flag = False
+        if not self.context["request"].data.get("status"):
+            status_flag = True
+        elif self.context["request"].data["status"] == 'CLOSED':
+            status_flag = False
+        if len(list_adv) < 10 or not status_flag:
             return data
         else:
             raise ValidationError('У пользователя не может быть больше 10 открытых объявлений')
